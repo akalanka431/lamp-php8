@@ -44,7 +44,13 @@ sudo apt-get install unzip
 
 echo -e "\n\nDownloading phpMyadmin & Unzip phpMyadmin\n"
 
-sudo wget https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-english.zip && sudo unzip phpMyAdmin-5.2.0-english.zip -d /var/www/html/phpmyadmin
+sudo wget https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-english.zip && mv phpMyAdmin-5.2.0-english.zip /var/www/html
+
+sudo unzip /var/www/html/phpMyAdmin-5.2.0-english.zip -d /var/www/html
+
+sudo mv /var/www/html/phpMyAdmin-5.2.0-english /var/www/html/phpmyadmin
+
+rm /var/www/html/phpMyAdmin-5.2.0-english.zip 
 
 echo -e "\n\nCreating MySQL user and database\n"
 
